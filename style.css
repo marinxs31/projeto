@@ -1,0 +1,213 @@
+:root {
+    --cor-texto:rgba(146, 20, 20, 0.87); 
+    --fonte-family: Arial, sans-serif;
+    --font-titulo: "Rubik Mono One", monospace;
+    --tam-raio-borda: 0px;
+    --tam-raio-borda-botes: 4 px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#6897df;
+    background: linear-gradient(rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0.521)), url("https://th.bing.com/th/id/R.c47de5fefeb558f692c364a838a2a96a?rik=Tat2iCBBSpLm2g&riu=http%3a%2f%2fimages.performgroup.com%2fdi%2flibrary%2fGoal_Brasil%2f41%2fa6%2ftorcida-vasco-maracana_zd57yjqoi1gm137ph9p21c4tc.jpg%3ft%3d-1892487007%26&ehk=xDeMdWx10y1Ywu5WM4sSfMC2cNWBuLKElN8LCAaTzxs%3d&risl=&pid=ImgRaw&r=0"); 
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+ }
+
+
+h1, h2, h3 {
+    font-family: var(--font-titulo);
+    text-align:center;
+    color:rgba(129, 7, 7, 0.904);
+    font-size:  200%;
+}
+
+p {
+    font-family: var(--font-titulo);
+    text-align: center;
+    color:rgba(129, 7, 7, 0.904);
+    font-size: 130%;
+
+}
+
+small {
+    font-family: var(--font-titulo);
+    text-align: center;
+    color:rgba(129, 7, 7, 0.904);
+    font-size: 330%;
+}
+
+img {
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+}
+/* Configurações para o formulário */
+form {
+    max-width: 250px;
+    margin: 60px auto;
+    padding: 5px;
+    background-color:rgb(138, 28, 28) ;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.Contato {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 5px;
+    background-color: rgb(138, 28, 28);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color:rgba(36, 34, 34, 0.521);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box
+} 
+
+input[type="numero"],
+textarea {
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box
+} 
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin: 2px;
+}
+
+.nav-buttons .button {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 15px;
+    background-color:rgb(138, 28, 28);
+    color: #fff0f0;
+    text-decoration: none;
+    border-radius: var(--tam-raio-borda-botoes);  
+}
+
+.container-images {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: var(--tam-raio-borda-botoes);
+}
+
+/* button:hover {
+    background-color: rebeccapurple;
+    color: goldenrod;
+} */
+
+header {
+    /* background-color: var(--primary-color); */
+    padding: 3rem;
+}
+
+.baixo {
+    max-width: 85px;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: rgb(138, 28, 28);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    display: inline-block;
+    
+}
+
+nav ul li {
+    margin: 0 1rem;
+    justify-content: center;
+    display: flex;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    text-align:center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: rgb(138, 28, 28);
+}
+
+.service {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+ul.botao {
+    list-style: none;
+    justify-content: center;
+    color: white;
+    display: flex;
+    margin: 50px;
+    text-decoration: none;
+    border-radius: var(--tam-raio-borda-botes);
+}
+
+
+@media(max-width: 600px){
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container-images {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+table {
+    margin: 60px auto;
+    padding: 5px;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}

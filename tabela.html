@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <title>Tabelas</title>
+</head>
+<body>
+  <h1>Criando Tabela</h1>
+    <table border="1" id="corpoTabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Mensagem</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      </table>
+      <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+        import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDDH-Uh4v_Q8Pf0CFBDLCcMsE86miuI8ho",
+    authDomain: "bd-recordar-9e9be.firebaseapp.com",
+    projectId: "bd-recordar-9e9be",
+    storageBucket: "bd-recordar-9e9be.appspot.com",
+    messagingSenderId: "214405508559",
+    appId: "1:214405508559:web:9baefe7846f146ce64f6ba",
+    measurementId: "G-1ZD2L7R0RP"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  //Conectar ao Firestore
+  const db = getFirestore(app);
+  async function carregarContatos() {
+    const corpoTabela = getElementsById('corpoTabela').getElementsById
+    try {
+      const querySnapshot = await getDocs(collection(db, "contatos"));
+      querySnapshot.foreach((doc) => {
+        const {Nome, Email, Mensagem, timestamp } = doc.Data();
+        const dataFormatada = timestamp ? new Date(timestamp.toDate(()))
+
+        const novaLinha = document.createElement
+        novaLinha.innerHTML = `
+  })
+       for (let i =0; i < dados.length; i++) {
+          corpoTabela.inner += `
+        <tr>
+          <td>${dados[i].Nome}</td>
+          <td>${dados[i].Email}</td>
+          <td>${dados[i].Mensagem}</td>
+          <td>${dados[i].Data}</td>
+        </tr>
+        ` ;
+        corpoTabela.append
+      }
+</script>
+</body>
+</html>
+
